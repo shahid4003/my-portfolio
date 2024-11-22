@@ -1,0 +1,47 @@
+---
+// @ts-ignore
+import Experiencecard from "./ui/experiencecard.astro";
+
+const experienceData = [
+  {
+    title: "Frontend Developer @ Brem.io",
+    from: "April 2024",
+    to: "present",
+    description:
+      "I am currently working in BREM.io agency involving the conversion of Figma designs to a Astro.js with CMS like (Keyststic, Payload) code quality enhancement through TypeScript. ",
+    tags: ["Astro Js", "React Js", "KeyStatic", "TypeScript", "Tailwind CSS"],
+  },
+  {
+    title: "Frontend Developer @ OzaCloud",
+    from: "Sep 2022",
+    to: "Present",
+    description:
+      "Led a comprehensive project involving the conversion of Figma designs to a Next.js, TypeScript and Tailwind CSS application, Anding FramerMotion aimations as well",
+    tags: [
+      "Next Js",
+      "React Js",
+      "Typescript",
+      "Framer Motion",
+      "Tailwind CSS",
+    ],
+  },
+  {
+    title: "Frontend Developer @ WeKrazy",
+    from: "Sep 2023",
+    to: "Jan 2024",
+    description:
+      "Leading premium code delivery for international projects at We Krazy, involving the conversion of Figma designs to a Next.js application and code quality enhancement through TypeScript,  and Test-Driven Development. ",
+    tags: ["React", "Next Js", "Astro", "Tailwind CSS"],
+  },
+];
+---
+
+<div class="my-16">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    My <span class="underpattern">Experience</span>
+  </h2>
+</div>
+
+<ul class="mx-auto divide-y-2 divide-gray-100 experiences-list h-full">
+  {experienceData.map((item) => <Experiencecard data={item} />)}
+</ul>

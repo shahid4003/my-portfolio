@@ -1,0 +1,79 @@
+---
+import Container from "@components/container.astro";
+import Cta from "@components/cta.astro";
+import ProjectCard from "@components/ui/projectcard.astro";
+import Layout from "@layouts/Layout.astro";
+const ProjectsData = [
+  {
+    title: "OzaCloud",
+    description:
+      "Ozacloud is a cloud hosting provider offering scalable IaaS solutions. The platform is designed to meet the evolving needs of modern enterprises with high availability, security, and scalability.",
+    img: "/images/ozacloud.png",
+    tags: ["NextJS", "TypeScript", "Tailwind", "Shadcn UI"],
+    link: "https://ozacloud.com/en-uk",
+  },
+  {
+    title: "MoorHouse",
+    description:
+      "Moorhouse Coating is a professional painting contractor Serving the Southwest with roots in Park City, Summit County Utah For over 20 years. ",
+    img: "/images/moorhouse.png",
+    tags: ["Astro JS", "Tailwind", "Keystatic CMS"],
+    link: "https://moorhousecoating.com/services/",
+  },
+  {
+    title: "We Krazy",
+    description:
+      "We Krazy is an independent agency, full of designers, developers, marketers and strategic thinkers.",
+    img: "/images/we-krazy.png",
+    tags: ["NextJS", "Tailwind"],
+    link: "https://we-krazy-new.vercel.app/",
+  },
+  {
+    title: "Mule Box",
+    description:
+      "Mule Box is an independently owned and operated mobile storage company. We deliver weather-resistant, 16-foot portable storage containers to homes and businesses when they are moving,",
+    img: "/images/mulebox.jpeg",
+    tags: ["Astro js", "Tailwind", "Keystatic CMS", "TypeScript"],
+    link: "https://mulebox.com/",
+  },
+  {
+    title: "TMJ",
+    description:
+      "TMJ (temporomandibular joint) disorders affect the joint that connects the jaw to the skull, leading to pain, stiffness, clicking sounds, and difficulty chewing or speaking.",
+    img: "/images/tmj.png",
+    tags: ["Astro Js", "Tailwind", "Gsap"],
+    link: "https://tmj-astro.netlify.app",
+  },
+  {
+    title: "Athenix Marketing",
+    description:
+      "Athenix Marketing is a full-service marketing, social media, and digital agency committed to redefining creative services with transparency and impact. ",
+    img: "/images/athenix.png",
+    tags: ["Astro Js", "Tailwind", "KeyStatic CMS"],
+    link: "https://athenixmarketing.com/",
+  },
+  {
+    title: "Healing At The Well",
+    description:
+      "At Healing at the Well, we believe in creating hope and healing for widows and their children who have walked through the devastating loss of a spouse and parent.",
+    img: "/images/healing.png",
+    tags: ["Astro Js", "Tailwind", "KeyStatic CMS"],
+    link: "https://healingatthewell.netlify.app/",
+  },
+];
+---
+
+<Layout title="">
+  <Container>
+    <div class="mt-16">
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-center">
+        My <span class="underpattern">Projects</span>
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8">
+      {ProjectsData.map((item) => <ProjectCard projectData={item} />)}
+    </div>
+    <Cta />
+  </Container>
+</Layout>
